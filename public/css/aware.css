@@ -1,0 +1,145 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    background-image: url('images/donor.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+      
+
+}
+
+header {
+   
+    color: #fff;
+    padding: 16px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+    margin-top: 0;
+}
+
+
+p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.btn1 {
+    display: inline-block;
+    padding: 10px 20px;
+   background-color: #c82333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    
+}
+
+li{
+    font-size: 16px;
+    color: #000000;
+}
+
+.btn1:hover {
+    background-color: #a50c1b;
+    color: whitesmoke;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #e4cdcd;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    width: 1050px;
+    border-radius: 15px;
+}
+
+nav li{
+    padding-bottom: 8px;
+    font-weight: 600;
+}
+
+#benefits{
+    margin-top: 25px;
+}
+#benefits li{
+    padding-bottom: 8px;
+}
+
+#eleigibility ul{
+    display:flex
+}
+#eligibility li{
+    padding-bottom: 8px;
+}
+
+#eligibility img{
+    display: inline-flex;
+    position: relative;
+    left: 637px;
+    bottom: 360px;
+}
+#eligibility {
+    margin-top: 20px;
+    height: 220px;
+}
+
+#process{
+    margin-top: 20px;
+}
+
+#myths{
+    margin-top: 20px;
+}
+
+#process li{
+    padding-bottom: 8px;
+}
+
+#myths li{
+    padding-bottom: 8px;
+}
+
+#testimonials{
+    padding: 20px;
+     height: 500px;
+    text-align: center;
+    background-color: rgba(180, 0, 0, 0.991);
+    color:rgb(244, 235, 235);
+    
+  }
+  
+  .testimonial-image{
+    margin-top: 25px;
+    width: 22%;
+    border-radius: 100%;
+   
+    text-align: center;
+  
+   
+  }
+
+
+  h2{
+
+   
+    text-align: center;
+   width: 1000px;
+  
+   margin-left: 50px;
+  
+  }
+
+  button[type="button"]
+  {
+    margin-top: 200px;
+  }
+  
