@@ -32,7 +32,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 
-mongoose.connect("mongodb+srv://Atishay_jain_25:025matru@cluster0.twfidla.mongodb.net/bloodMitr", { useNewUrlParser: true });
+mongoose.connect("mongodb+srv://"+process.env.MONGO_ID, { useNewUrlParser: true });
 const userSchema = new mongoose.Schema({
   email: { type: String, require: true, index: true, unique: true, sparse: true },
   password: { type: String, require: true },
@@ -182,8 +182,8 @@ app.post("/donate", function (req, res) {
   });
   // Define the location to search around
   var location = City;
-  var api_key = 'AIzaSyD1i9_yLXD3UahclR2YF1bsAQsvAIE60mU';
-  var request_url = 'https://maps.googleapis.com/maps/api/place/textsearch/json?query=blood+bank+in+' + location + '&key=AIzaSyD1i9_yLXD3UahclR2YF1bsAQsvAIE60mU';
+  var api_key = process.env.API_KEY;
+  var request_url = 'https://maps.googleapis.com/maps/api/place/textsearch/json?query=blood+bank+in+' + location + '&key='+api_key;
 
   fetch(request_url)
     .then(function (response) {
@@ -345,7 +345,7 @@ app.post("/fadon", function (req, res) {
 
 app.post("/sos", function (req, res) {
   var toEmail = [];
-  var message = "Details of patient:\n"+req.body.name+"\n"+req.body.phoneno+"\n"+req.body.email+"\n"+req.body.age+"\n"+req.body.bloodgroup+"\n" + req.body.address+"\n"+req.body.city+"\n" + req.body.state+"\nKindly conatct above person if required blood group donor found!";
+  const message = "Details of patient:\nPatient Name"+req.body.name+"\nContact no:"+req.body.phoneno+"\nContact Email"+req.body.email+"\nPatient Age:"+req.body.age+"\nPatient bloodgroup"+req.body.bloodgroup+"\nPatient Address:" + req.body.address+"\nCity:"+req.body.city+"\nState" + req.body.state+"\nKindly conatct above person if required blood group donor found!";
   console.log(message);
   volunteer.find({})
   .then(function(foundVol){
