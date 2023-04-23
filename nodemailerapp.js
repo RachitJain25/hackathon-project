@@ -7,12 +7,12 @@ function sendEmail(toEmail  , message){
         port: 465,
         secure: true,
         auth: {
-            user: 'bloodmitr@gmail.com',
-            pass: 'fawfrcjlrdigjxqe'
+            user: 'bloodmitr123@gmail.com',
+            pass: 'pkqbcdapiygiobao'
         }
     });
     const mailOptions = {
-        from: '"Blood Mitr" <bloodmitr@gmail.com>', // sender address
+        from: '"Blood Mitr" <bloodmitr123@gmail.com>', // sender address
         to: toEmail, // list of receivers
         subject: 'EMERGENCY DONOR REQUIRED', // Subject line
         text: message, // plain text body
