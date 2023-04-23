@@ -301,7 +301,7 @@ const findADonor = new mongoose.Schema({
   state: String,
   city: String,
   gender: String,
-  address: String
+  address: String,
 
 });
 
@@ -395,7 +395,14 @@ app.get("/request",function(req,res){
     res.redirect("/");
   }
 })
-
+app.get("about",function(req,res){
+  if (req.isAuthenticated()) {
+    res.render("about");
+  }
+  else {
+    res.redirect("/");
+  }
+})
 
 app.get("/donate", function (req, res) {
   if (req.isAuthenticated()) {

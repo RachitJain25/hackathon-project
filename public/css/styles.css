@@ -325,4 +325,22 @@ footer {
     height:50px;
   }
 
- 
+ .carousel-caption h4{
+font-size: 100px;
+text-transform: uppercase;
+letter-spacing: 2px;
+margin-top: 25px;
+position: relative;
+bottom: 275px;
+
+ }
+
+
+ .carousel-caption p{
+    width: 70%;
+    margin: auto;
+    font-size: 30px;
+    line-height: 1.9;
+    position: relative;
+bottom: 275px;
+ }
