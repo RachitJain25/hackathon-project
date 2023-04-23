@@ -375,7 +375,26 @@ app.post("/sos", function (req, res) {
 
 
 
-
+app.get("/request",function(req,res){
+  if(req.isAuthenticated()){
+    nFDonor.find({})
+    .then(function(foundReq){
+      if(foundReq){
+        res.render("requests",{message:"Blood donation costs you nothing ,But it can mean the world to someone in need",foundData:foundReq});
+      }
+      else{
+        res.render("requests",{message:"No request Is there!!",foundData:foundReq});
+      }
+    })
+    .catch(function(err){
+      console.log(err);
+      res.redirect("/");
+    });
+  }
+  else{
+    res.redirect("/");
+  }
+})
 
 
 app.get("/donate", function (req, res) {
