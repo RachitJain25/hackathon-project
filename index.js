@@ -397,7 +397,7 @@ app.get("/request",function(req,res){
 })
 app.get("about",function(req,res){
   if (req.isAuthenticated()) {
-    res.render("about");
+    res.render("/about");
   }
   else {
     res.redirect("/");
